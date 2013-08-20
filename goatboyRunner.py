@@ -16,6 +16,7 @@ def initializeGame(gameState):
     gs.screen = pygame.display.get_surface() # Skarmyta
     gs.back_file_name = os.path.join("data", "background.bmp") # bakgrundsfilnamnsokvag
     gs.back_surface = pygame.image.load(gs.back_file_name)
+    gs.back_surface = pygame.transform.scale(gs.back_surface,gs.screen.get_size())
     gs.clock = pygame.time.Clock()
     gs.background = pygame.Surface(gs.screen.get_size())
     gs.scrollx = 0
